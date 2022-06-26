@@ -1,0 +1,36 @@
+export const projectsData = [
+  {
+    id: 1,
+    img: "ecommerce.png",
+    title: "E-commerce Website",
+    desc: " clone, user authentication system using JWT, fully functional cart using Redux Toolkit, payments with STRIPE, server-side product filtering by categories",
+    tech: [
+      "React",
+      "Redux",
+      "styled-components",
+      "Express",
+      "MongoDB",
+      "stripe",
+    ],
+    live: "https://x-kom-clone.netlify.app",
+    source: "https://github.com/",
+  },
+  {
+    id: 2,
+    img: "portfolioaga.png",
+    title: "Architecture Portfolio",
+    desc: "I used Sanity CMS to make the process of adding and editing projects easy and straightforward for my client",
+    tech: ["React", "Sanity", "styled-components", "Framer Motion"],
+    live: "https://nowacka-piech.netlify.app/",
+    source: "https://github.com/",
+  },
+  {
+    id: 3,
+    img: "bags360.png",
+    title: "360 Photography Website",
+    desc: "I built this website for my 360 photography business idea, although the business didn't take off it inspired me to become a web developer in the first place.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: "https://byjah360.netlify.app/",
+    source: "https://github.com/",
+  },
+];
