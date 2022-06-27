@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { device } from "../utils/breakpoints";
+import ContactForm from "./ContactForm";
 
 const Container = styled.div`
   display: flex;
@@ -44,57 +45,13 @@ const SocialsItem = styled.a`
 const Right = styled.div`
   flex: 1;
 `;
-const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+
 const Title = styled.h1`
   margin-bottom: 16px;
   font-size: 3rem;
 `;
 
-const Input = styled.input`
-  width: 100%;
-  margin-bottom: 16px;
-  padding: 8px;
-  font-size: 1.2rem;
-  border-radius: 8px;
-`;
-const TextArea = styled.textarea`
-  width: 100%;
-  resize: vertical;
-  margin-bottom: 16px;
-  padding: 8px;
-  min-height: 300px;
-
-  border-radius: 8px;
-  font-size: 1.2rem;
-`;
-const Button = styled.button`
-  width: 100%;
-  padding: 8px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  transition: all 250ms ease;
-  background-color: var(--color-primary);
-  color: #fff;
-
-  &:hover {
-    background-color: #a85cd2;
-  }
-
-  &:active {
-    background-color: #4a0f6a;
-  }
-`;
-
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("send");
-  };
   return (
     <Container>
       <Left>
@@ -107,7 +64,7 @@ const Contact = () => {
           </Socials>
           <ContactItem>
             <FontAwesomeIcon icon="fa-envelope" />
-            <span>barnowacki@wp.pl</span>
+            <span>bknowacki@gmail.com</span>
           </ContactItem>
           <ContactItem>
             <FontAwesomeIcon icon="fa-phone" />
@@ -116,12 +73,7 @@ const Contact = () => {
         </ContactList>
       </Left>
       <Right>
-        <Form onSubmit={handleSubmit}>
-          <Input required type="text" placeholder="Your Name" />
-          <Input required type="email" placeholder="Your Email" />
-          <TextArea required placeholder="Message" />
-          <Button type="submit">SEND</Button>
-        </Form>
+        <ContactForm />
       </Right>
     </Container>
   );

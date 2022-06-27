@@ -6,6 +6,18 @@
 :root {
   --color-primary: rgb(136, 76, 171);
   --color-secondary: rgb(97, 164, 206);
+  --gradient: linear-gradient(
+    225deg,
+    #742c93,
+    #742c93,
+    #742c93,
+    #4b69a0,
+    #2b86c5,
+    #4b69a0,
+    #742c93,
+    #742c93,
+    #742c93
+  );
 }
 body {
   background-color: #111;

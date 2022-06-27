@@ -77,19 +77,12 @@ const Title = styled.h1`
 `;
 const Subtitle = styled.h2`
   font-size: 2rem;
-  background: linear-gradient(
-    225deg,
-    #ff3cac,
-    #784ba0,
-    #2b86c5,
-    #784ba0,
-    #ff3cac
-  );
+  background: var(--gradient);
   background-size: 400%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: text-bg-anim 10s linear infinite alternate;
+  animation: text-bg-anim 8s linear infinite;
 
   @keyframes text-bg-anim {
     0% {
