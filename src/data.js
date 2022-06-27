@@ -3,7 +3,7 @@ export const projectsData = [
     id: 1,
     img: "ecommerce.png",
     title: "E-commerce Website",
-    desc: " clone, user authentication system using JWT, fully functional cart using Redux Toolkit, payments with STRIPE, server-side product filtering by categories",
+    desc: " inspired design, fully functional cart using Redux Toolkit, payments with STRIPE, server-side product filtering by categories",
     tech: [
       "React",
       "Redux",
@@ -31,6 +31,6 @@ export const projectsData = [
     desc: "I built this website for my 360 photography business idea, although the business didn't take off it inspired me to become a web developer in the first place.",
     tech: ["HTML", "CSS", "JavaScript"],
     live: "https://byjah360.netlify.app/",
-    source: "https://github.com/",
+    source: "https://github.com/Byjah11/Byjah360",
   },
 ];
