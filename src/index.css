@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --color-primary: rgb(136, 76, 171);
+  --color-primary: #884cab;
   --color-secondary: rgb(97, 164, 206);
   --gradient: linear-gradient(
     225deg,
