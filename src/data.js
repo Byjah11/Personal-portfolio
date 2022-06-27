@@ -13,7 +13,7 @@ export const projectsData = [
       "stripe",
     ],
     live: "https://x-kom-clone.netlify.app",
-    source: "https://github.com/",
+    source: "https://github.com/Byjah11/E-Commerce-Website",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const projectsData = [
     desc: "I used Sanity CMS to make the process of adding and editing projects easy and straightforward for my client",
     tech: ["React", "Sanity", "styled-components", "Framer Motion"],
     live: "https://nowacka-piech.netlify.app/",
-    source: "https://github.com/",
+    source: "https://github.com/Byjah11/Nowacka-Piech-Portfolio",
   },
   {
     id: 3,

@@ -19,14 +19,17 @@ const ImageOverlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  padding-right: 25%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: all 0.5s ease;
+  @media ${device.tablet} {
+    padding: 2rem;
+    padding-right: 25%;
+  }
 `;
 
 const OverlayTitle = styled.h1`
@@ -41,10 +44,14 @@ const OverlayTitle = styled.h1`
 `;
 const OverlayDesc = styled.div`
   opacity: 0;
+  font-size: 0.8rem;
   transform: translate(0, 50%);
   transition: all 0.5s ease;
   a {
     color: inherit;
+  }
+  @media ${device.tablet} {
+    font-size: 1rem;
   }
 `;
 
