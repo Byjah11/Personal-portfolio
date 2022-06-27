@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { device } from "../utils/breakpoints";
 
 const Container = styled.div``;
 
@@ -9,10 +10,15 @@ const Title = styled.h2`
 
 const Skills = styled.div`
   display: flex;
+  flex-direction: column;
   margin: 16px 20px;
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 const SkillsSection = styled.div`
   flex: 1;
+  margin-bottom: 16px;
 `;
 const SkillsTitle = styled.h3`
   color: var(--color-primary);
@@ -22,7 +28,7 @@ const SkillsList = styled.div`
   flex-direction: column;
 `;
 const SkillsItem = styled.div`
-  margin-top: 16px;
+  margin-top: 8px;
   font-size: 1.5rem;
   span {
     margin-left: 16px;
@@ -52,17 +58,17 @@ const About = () => {
       <Title>My skills</Title>
       <Skills>
         <SkillsSection>
-          <SkillsTitle>Back-end</SkillsTitle>
+          <SkillsTitle>Front-end</SkillsTitle>
           <SkillsList>
-            {skills.back.map(([name, icon]) => (
+            {skills.front.map(([name, icon]) => (
               <SkillsItem key={name}>{name}</SkillsItem>
             ))}
           </SkillsList>
         </SkillsSection>
         <SkillsSection>
-          <SkillsTitle>Front-end</SkillsTitle>
+          <SkillsTitle>Back-end</SkillsTitle>
           <SkillsList>
-            {skills.front.map(([name, icon]) => (
+            {skills.back.map(([name, icon]) => (
               <SkillsItem key={name}>{name}</SkillsItem>
             ))}
           </SkillsList>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { device } from "../utils/breakpoints";
 
 const Container = styled.div`
   display: flex;
@@ -33,6 +34,10 @@ const OverlayTitle = styled.h1`
   opacity: 0;
   transform: translate(0, -50%);
   transition: all 0.5s ease;
+  display: none;
+  @media ${device.tablet} {
+    display: block;
+  }
 `;
 const OverlayDesc = styled.div`
   opacity: 0;
@@ -66,8 +71,8 @@ const Image = styled.img`
 
 const Info = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 `;
 const InfoTitle = styled.h4`
   color: #666;
@@ -75,9 +80,11 @@ const InfoTitle = styled.h4`
 `;
 const TechList = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 const TechItem = styled.div`
   margin-right: 8px;
+  margin-bottom: 8px;
   font-size: 1.2rem;
   background-color: var(--color-primary);
   color: #fff;
@@ -86,6 +93,7 @@ const TechItem = styled.div`
 `;
 const InfoLinks = styled.div`
   display: flex;
+  align-self: center;
 `;
 const InfoLink = styled.a`
   margin-left: 8px;
@@ -117,7 +125,7 @@ const Project = ({ p }) => {
           <OverlayTitle>{p.title}</OverlayTitle>
           <OverlayDesc>
             {p.id === 1 && (
-              <a href="https://www.x-kom.pl/" target="_blank">
+              <a href="https://www.x-kom.pl/" target="_blank" rel="noreferrer">
                 X-kom
               </a>
             )}
@@ -126,6 +134,16 @@ const Project = ({ p }) => {
         </ImageOverlay>
       </ImageContainer>
       <Info>
+        <InfoLinks>
+          <InfoLink href={p.live} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon="arrow-up-right-from-square" />
+            <span>See it live</span>
+          </InfoLink>
+          <InfoLink href={p.source} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon="fa-brands fa-github" />
+            <span>Source Code</span>
+          </InfoLink>
+        </InfoLinks>
         <div>
           <InfoTitle>{"// Technologies used"}</InfoTitle>
           <TechList>
@@ -134,16 +152,6 @@ const Project = ({ p }) => {
             ))}
           </TechList>
         </div>
-        <InfoLinks>
-          <InfoLink href={p.live} target="_blank">
-            <FontAwesomeIcon icon="arrow-up-right-from-square" />
-            <span>See it live</span>
-          </InfoLink>
-          <InfoLink href={p.source} target="_blank">
-            <FontAwesomeIcon icon="fa-brands fa-github" />
-            <span>Source Code</span>
-          </InfoLink>
-        </InfoLinks>
       </Info>
     </Container>
   );

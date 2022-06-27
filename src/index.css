@@ -1,0 +1,13 @@
+* {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: rgb(136, 76, 171);
+  --color-secondary: rgb(97, 164, 206);
+}
+body {
+  background-color: #111;
+  color: #eee;
+}

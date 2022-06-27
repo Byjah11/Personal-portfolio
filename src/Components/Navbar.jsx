@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useEffect } from "react";
+import { device } from "../utils/breakpoints";
+import { scrollTo } from "../utils/utils";
 
 const Container = styled.div`
   width: 100%;
@@ -17,9 +18,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 32px);
   max-width: 1260px;
   margin: auto;
+  @media ${device.tablet} {
+    width: calc(100% - 64px);
+  }
 `;
 const Left = styled.div``;
 
@@ -27,15 +31,36 @@ const Logo = styled.div`
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
+  display: none;
 
   span {
     color: var(--color-primary);
+  }
+
+  @media ${device.tablet} {
+    display: block;
+  }
+`;
+const LogoMobile = styled.div`
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  @media ${device.tablet} {
+    display: none;
   }
 `;
 
 const Right = styled.div``;
 const NavLinks = styled.div`
-  display: flex;
+  display: none;
+  @media ${device.tablet} {
+    display: flex;
+  }
 `;
 const NavLink = styled.div`
   margin-left: 2rem;
@@ -48,7 +73,7 @@ const NavLink = styled.div`
     content: "";
     width: 0;
     height: 100%;
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     position: absolute;
     z-index: -1;
     opacity: 0;
@@ -64,18 +89,15 @@ const NavLink = styled.div`
 `;
 
 const Navbar = () => {
-  const scrollTo = (id) => {
-    const section = document.getElementById(id);
-    const yOffset = -62;
-    const y =
-      section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
   return (
     <Container>
       <Wrapper>
         <Left>
+          <LogoMobile
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            b<span>.</span>n
+          </LogoMobile>
           <Logo onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             bartek<span>.</span>nowacki
           </Logo>

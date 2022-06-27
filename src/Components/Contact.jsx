@@ -1,14 +1,22 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { device } from "../utils/breakpoints";
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 const Left = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
 `;
 const ContactList = styled.div``;
 const ContactItem = styled.div`

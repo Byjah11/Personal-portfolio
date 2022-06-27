@@ -13,16 +13,20 @@ import {
   faPhone,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import { device } from "./utils/breakpoints";
 
 library.add(fab, faArrowUpRightFromSquare, faPhone, faEnvelope);
 
 const Container = styled.div``;
 
 const Section = styled.section`
-  width: 100%;
+  width: calc(100% - 16px);
   height: 100%;
   max-width: 1260px;
   margin: 32px auto;
+  @media ${device.tablet} {
+    width: calc(100% - 64px);
+  }
 `;
 
 const SectionTitle = styled.h1`
@@ -35,7 +39,9 @@ const App = () => {
   return (
     <Container>
       <Navbar />
-      <Banner />
+      <Section>
+        <Banner />
+      </Section>
       <Section id="about">
         <SectionTitle>About Me</SectionTitle>
         <About />
