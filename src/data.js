@@ -1,7 +1,7 @@
 export const projectsData = [
   {
     id: 1,
-    img: "ecommerce.png",
+    img: "ecommerce.jpg",
     title: "E-commerce Website",
     desc: " inspired design, fully functional cart using Redux Toolkit, payments with STRIPE, server-side product filtering by categories. Warning: Some features are not implemented and the site is not responsive yet, the server is hosted on heroku so it might take some time to load.",
     tech: [
@@ -17,7 +17,16 @@ export const projectsData = [
   },
   {
     id: 2,
-    img: "portfolioaga.png",
+    img: "portfolio_aga.jpg",
+    title: "Architecture Portfolio",
+    desc: "Designed by my client, coded by me.",
+    tech: ["React", "styled-components", "Framer Motion"],
+    live: "https://agnieszkanowacka.netlify.app/",
+    source: "https://github.com/Byjah11/Architecture-Portfolio-2",
+  },
+  {
+    id: 3,
+    img: "nowacka_piech.jpg",
     title: "Architecture Portfolio",
     desc: "I used Sanity CMS to make the process of adding and editing projects easy and straightforward for my client.",
     tech: ["React", "Sanity", "styled-components", "Framer Motion"],
@@ -25,8 +34,8 @@ export const projectsData = [
     source: "https://github.com/Byjah11/Nowacka-Piech-Portfolio",
   },
   {
-    id: 3,
-    img: "bags360.png",
+    id: 4,
+    img: "bags360.jpg",
     title: "360 Photography Website",
     desc: "I built this website for my 360 photography business idea, although the business didn't take off it inspired me to become a web developer in the first place.",
     tech: ["HTML", "CSS", "JavaScript"],
